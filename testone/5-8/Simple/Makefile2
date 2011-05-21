@@ -1,0 +1,27 @@
+main: main.o common.o d2b.o multi.o encryption.o exchange.o common.h
+	gcc main.o common.o d2b.o multi.o encryption.o exchange.o  -I. -o main
+
+main.o: common.h d2b.h multi.h encryption.h exchange.h 
+	
+
+common.o: 
+
+
+d2b.o:  
+
+
+multi.o: 
+	
+
+encryption.o: 
+	
+
+exchange.o: 
+	
+
+clean:
+	@echo "cleanning project"
+	-rm main *.o
+	@echo "clean completed"
+
+.PHONY: clean

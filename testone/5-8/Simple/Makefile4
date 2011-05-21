@@ -1,0 +1,11 @@
+objs =  main.o common.o d2b.o multi.o encryption.o exchange.o 
+main:$(objs)
+	$(CC) $^ -o $@
+
+
+clean:
+	@echo "cleanning project"
+	-rm main *.o
+	@echo "clean completed"
+
+.PHONY: clean

@@ -1,0 +1,9 @@
+cat >  test  
+ ls -a
+ls -o -g
+ls -o
+cat  main  > lls
+gcc   -c   common.c
+    readelf -a email   > email.txt    
+ readelf -a email   < email.txt 
+cat  <  hlkjo
