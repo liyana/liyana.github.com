@@ -1,0 +1,417 @@
+/* calc_a_s.c */  
+    
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#define PI 3.141592653
+/* add */ 
+long long calc_add(int a1, int a2) 
+{
+	
+long long result = 0;
+	
+
+result = (long long) a1 + (long long) a2;
+	
+
+return result;
+
+}
+
+
+
+/* sub */ 
+long long calc_sub(int b1, int b2) 
+{
+	
+long long result = 0;
+	
+
+result = (long long) b1 - (long long) b2;
+	
+
+return (result);
+
+}
+
+
+
+/* multi */ 
+long long calc_multi(int c1, int c2) 
+{
+	
+long long result = 0;
+	
+
+result = (long long) c1 *(long long) c2;
+	
+
+return (result);
+
+}
+
+
+
+/* div */ 
+long long calc_div(int d1, int d2) 
+{
+	
+long long result = 0;
+	
+
+result = (long long) d1 / (long long) d2;
+	
+
+return (result);
+
+}
+
+
+
+ /*PI*/ 
+double calc_PI() 
+{
+	
+double result = 0;
+	
+
+result = PI;
+	
+
+return (result);
+
+}
+
+
+
+/*sin*/ 
+double calc_sin(double e1) 
+{
+	
+double result = 0;
+	
+
+result = sin(e1);
+	
+
+return (result);
+
+}
+
+
+
+/*cos*/ 
+double calc_cos(double f1) 
+{
+	
+double result = 0;
+	
+
+result = cos(f1);
+	
+
+return (result);
+
+}
+
+
+
+/*tan*/ 
+double calc_tan(double g1) 
+{
+	
+double result = 0;
+	
+
+result = tan(g1);
+	
+
+return (result);
+
+}
+
+
+
+/*abs*/ 
+double calc_fabs(double h1) 
+{
+	
+double result = 0;
+	
+
+result = fabs(h1);
+	
+
+return (result);
+
+}
+
+
+
+/*exp*/ 
+double calc_exp(double t1) 
+{
+	
+double result = 0;
+	
+
+result = exp(t1);
+	
+
+return (result);
+
+}
+
+
+
+/*log*/ 
+double calc_log(double t1) 
+{
+	
+double result = 0;
+	
+
+result = log(t1);
+	
+
+return (result);
+
+}
+
+
+
+/*log10*/ 
+double calc_log10(double t1) 
+{
+	
+double result = 0;
+	
+
+result = log10(t1);
+	
+
+return (result);
+
+}
+
+
+
+/*pow*/ 
+double calc_pow(double t1, double t2) 
+{
+	
+double result = 0;
+	
+
+result = pow(t1, t2);
+	
+
+return (result);
+
+}
+
+
+
+/*rand*/ 
+double calc_rand() 
+{
+	
+double result = 0;
+	
+
+result = rand();
+	
+
+return (result);
+
+}
+
+
+
+/* main */ 
+int main(int argc, char **argv)	// Have Problems! Do you know why?
+{
+	
+unsigned int calc_mod = 0;
+	
+int idata = 0;
+	
+int kdata = 0;
+	
+long long result = 0;
+	
+double result1 = 0.0;
+	
+
+if (argc < 2)
+		
+ {
+		
+printf("enter cmd numbers must > 2!!!\n");
+		
+return -1;
+		
+}
+	
+argv++;
+	
+calc_mod = atoi(*argv);
+	
+argv++;
+	
+idata = atoi(*argv);
+	
+argv++;
+	
+kdata = atoi(*argv);
+	
+
+printf("Enter is mod<%d> data_f<%d> data_b<%d> \n", calc_mod,
+		 idata, kdata);
+	
+
+switch (calc_mod)
+		
+ {
+	
+case 1:
+		
+result = calc_add(idata, kdata);
+		
+printf("Calc add (%d + %d) result is %d\n", idata, kdata,
+			(int) result);
+		
+break;
+	
+
+case 2:
+		
+result = calc_sub(idata, kdata);
+		
+printf("Calc sub (%d - %d) result is %d\n", idata, kdata,
+			(int) result);
+		
+break;
+	
+
+case 3:
+		
+result = calc_multi(idata, kdata);
+		
+printf("Calc multi (%d * %d) result is %d\n", idata,
+			kdata, (int) result);
+		
+break;
+	
+
+case 4:
+		
+result = calc_div(idata, kdata);
+		
+printf("Calc div (%d / %d) result is %d\n", idata, kdata,
+			(int) result);
+		
+break;
+		
+		   case 5:
+		       result1= calc_PI();
+		       printf("Calc PI result is %d\n", result1);                        
+		       break; 
+
+case 6:
+		
+result1 = calc_sin((double) idata);
+		
+printf("Calc sin(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 7:
+		
+result1 = calc_cos((double) idata);
+		
+printf("Calc cos(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 8:
+		
+result1 = calc_tan((double) idata);
+		
+printf("Calc tan(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 9:
+		
+result1 = calc_fabs((double) idata);
+		
+printf("Calc fabs(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 10:
+		
+result1 = calc_exp((double) idata);
+		
+printf("Calc exp(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 11:
+		
+result1 = calc_log((double) idata);
+		
+printf("Calc ln(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 12:
+		
+result1 = calc_log10((double) idata);
+		
+printf("Calc log10(%d) result is %f\n", idata, result1);
+		
+break;
+	
+
+case 13:
+		
+result1 = calc_pow((double) idata, (double) kdata);
+		
+printf("Calc pow(%d,%d) result is %f\n", idata, kdata,
+			result1);
+		
+break;
+	
+
+case 14:
+		
+result1 = calc_rand();
+		
+printf("Calc rand() result is %f\n", result1);
+		
+break;
+	
+
+default:
+		
+printf("Enter calc mod error!!!\n");
+		
+break;
+		
+}
+	
+
+return 0;
+
+}
+
+

@@ -3,7 +3,7 @@
 int main(int argc, const char *argv[])
 {
      int i;
-     char a[9]="abcdefghi";
+     char a[]="abcdefghi";
      char b[10]={0};
    /*
      for(i=0;i<=8;i+=2){
