@@ -1,0 +1,26 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <signal.h> 
+#include <unistd.h> 
+#include <sys/wait.h> 
+
+
+void handler(int num) 
+{ 
+	
+	int status; 
+	int pid = waitpid(-1, &status, WNOHANG); 
+	if (WIFEXITED(status)) { 
+		printf("The child %d exit with code %d\n", pid, WEXITSTATUS(status)); 
+	} 
+} 
+
+int main() 
+{ 
+	
+	int c_pid; 
+	int pid; 
+        int i;
+	signal(SIGCHLD, handler); 
+
+	if ((pid = fork())) //
